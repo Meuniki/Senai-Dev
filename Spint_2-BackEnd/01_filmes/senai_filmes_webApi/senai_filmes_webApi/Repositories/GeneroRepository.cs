@@ -103,7 +103,7 @@ namespace senai_filmes_webApi.Repositories
                 con.Open();
 
                 // Declara o SqlDataReader rdr para percorrer a tabela do Banco
-                SqlDataReader rdr;
+                SqlDataReader rdr; 
 
                 // Declara o SqlCommand cmd passando a querry que será executada e a conexao com 
                 using (SqlCommand cmd = new SqlCommand(querrySelectAll))

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\aula_20\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {}
+    "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\aula_20\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {
+    "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\aula_20\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
         "projectName": "senai_filmes_webApi",
-        "projectPath": "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\aula_20\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
+        "projectPath": "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
         "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\aula_20\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\obj\\",
+        "outputPath": "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
