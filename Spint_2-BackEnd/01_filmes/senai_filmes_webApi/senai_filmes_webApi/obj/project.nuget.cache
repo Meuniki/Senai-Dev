@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fmrs+7DlcF4S5VCILQ4A7ICpZrD/rijtwfbXo0cFDBbkUBlV4pZ749C+im1PgsoJHXvaxnV3QO5YuRPAJtiiNQ==",
+  "dgSpecHash": "V+FWhTDxRBXt5zwzDncoWcMZQ1JPz1v2NXUumLijY/Q2U3U2YmsnreKaVyBVctxHCbUOTld1XSc0QATsfPK9zg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marce\\Videos\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
+  "projectFilePath": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
