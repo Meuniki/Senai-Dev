@@ -3,8 +3,6 @@ using Senai_Peoples_WebApi_Manha.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Senai_Peoples_WebApi_Manha.Repositories{
 
@@ -31,7 +29,7 @@ namespace Senai_Peoples_WebApi_Manha.Repositories{
 
             using (SqlConnection con = new SqlConnection(stringConxao)){
 
-                string querySelectAll = "SELECT idFuncionarios, nome, sobrenome FROM Funcionarios";
+                string querySelectAll = "SELECT idFuncionarios, nome, sobrenome, DataNascimento FROM Funcionarios";
 
                 con.Open();
 
@@ -49,7 +47,9 @@ namespace Senai_Peoples_WebApi_Manha.Repositories{
 
                             nome = rdr["nome"].ToString(),
 
-                            sobrenome = rdr["sobrenome"].ToString()
+                            sobrenome = rdr["sobrenome"].ToString(),
+
+                            DataNascimento = Convert.ToDateTime(rdr["DataNascimento"])
                         };
                         Listafuncionarios.Add(funcionario);
                     }
@@ -69,7 +69,7 @@ namespace Senai_Peoples_WebApi_Manha.Repositories{
 
             using (SqlConnection con = new SqlConnection(stringConxao)){
 
-                string querySelectById = "SELECT idFuncionarios, nome, sobrenome FROM Funcionarios WHERE idFuncionarios = @ID";
+                string querySelectById = "SELECT idFuncionarios, nome, sobrenome, DataNascimento FROM Funcionarios WHERE idFuncionarios = @ID";
 
                 con.Open();
 
@@ -87,7 +87,8 @@ namespace Senai_Peoples_WebApi_Manha.Repositories{
 
                             idFuncionario = Convert.ToInt32(rdr[0]),
                             nome = rdr[1].ToString(),
-                            sobrenome = rdr[2].ToString()
+                            sobrenome = rdr[2].ToString(),
+                            DataNascimento = Convert.ToDateTime(rdr[3])
                         };
                         return funcionarioBuscado;
                     }
@@ -105,13 +106,14 @@ namespace Senai_Peoples_WebApi_Manha.Repositories{
 
             using (SqlConnection con = new SqlConnection(stringConxao)){
 
-                string queryUpdateUrl = "UPDATE Funcionarios SET nome = @Nome, sobrenome = @Sobrenome WHERE idFuncionarios = @ID";
+                string queryUpdateUrl = "UPDATE Funcionarios SET nome = @Nome, sobrenome = @Sobrenome, @DataNascimento = Datanascimento WHERE idFuncionarios = @ID";
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdateUrl, con)){
 
                     cmd.Parameters.AddWithValue("@ID", id);
                     cmd.Parameters.AddWithValue("@Nome", funcionario.nome);
                     cmd.Parameters.AddWithValue("@Sobrenome", funcionario.sobrenome);
+                    cmd.Parameters.AddWithValue("@DataNascimento", funcionario.DataNascimento);
 
                     con.Open();
 
@@ -129,12 +131,13 @@ namespace Senai_Peoples_WebApi_Manha.Repositories{
 
             using (SqlConnection con = new SqlConnection(stringConxao)){
 
-                string queryInsert = "INSERT INTO funcionarios(nome, sobrenome) VALUES (@Nome, @Sobrenome)";
+                string queryInsert = "INSERT INTO funcionarios(nome, sobrenome, DataNascimento) VALUES (@Nome, @Sobrenome, @DataNascimento)";
 
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con)){
 
                     cmd.Parameters.AddWithValue("@Nome", novoFuncionario.nome);
                     cmd.Parameters.AddWithValue("@Sobrenome", novoFuncionario.sobrenome);
+                    cmd.Parameters.AddWithValue("@DataNascimento", novoFuncionario.DataNascimento);
 
                     con.Open();
 

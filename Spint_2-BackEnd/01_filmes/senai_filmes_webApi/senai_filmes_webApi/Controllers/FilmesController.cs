@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 /// </summary>
 namespace senai_filmes_webApi.Controllers
 {
-    [Produces("Application/jason")]
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class FilmesController : ControllerBase
