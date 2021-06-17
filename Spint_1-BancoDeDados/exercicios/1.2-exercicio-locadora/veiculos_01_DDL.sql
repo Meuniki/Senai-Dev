@@ -1,0 +1,47 @@
+CREATE DATABASE Veiculos;
+GO 
+
+USE Veiculos;
+
+CREATE TABLE Empresas(
+	idEmpresa INT PRIMARY KEY IDENTITY,
+	nome VARCHAR(500) 
+);
+GO
+
+CREATE TABLE Marcas(
+	idMarca INT PRIMARY KEY IDENTITY,
+	nome VARCHAR(500) UNIQUE
+);
+GO
+
+CREATE TABLE Modelos(
+	idModelo INT PRIMARY KEY IDENTITY,
+	descricao VARCHAR(500) UNIQUE,
+	idMarca INT FOREIGN KEY REFERENCES Marcas(idMarca)
+);
+GO
+
+CREATE TABLE Veiculos(
+	idVeiculo INT PRIMARY KEY IDENTITY,
+	descricao VARCHAR(500) UNIQUE,
+	idEmpresa INT FOREIGN KEY REFERENCES Empresas(idEmpresa),
+	idModelo INT FOREIGN KEY REFERENCES Modelos(idModelo)
+);
+GO
+
+CREATE TABLE Clientes(
+	idCliente INT PRIMARY KEY IDENTITY,
+	nome VARCHAR(500),
+	CPF VARCHAR(11) UNIQUE 
+);
+GO
+
+CREATE TABLE Alugueis(
+	idAluguel INT PRIMARY KEY IDENTITY,
+	dataInicio DATE NOT NULL,
+	dataFim DATE NOT NULL,
+	idVeiculo INT FOREIGN KEY REFERENCES Veiculos(idVeiculo),
+	idCliente INT FOREIGN KEY REFERENCES Clientes(idCliente)
+);
+GO
