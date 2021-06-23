@@ -1,15 +1,12 @@
-﻿using senai_filmes_webApi.Domains;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using senai_filmes_webApi.Domains;
 
 namespace senai_filmes_webApi.Interfaces
 {
     /// <summary>
     /// Interface responsável pelo repositório GeneroRepository
     /// </summary>
-    interface IGeneroRepository
+    public interface IGeneroRepository
     {
         // TipoRetorno NomeMetodo(TipoParâmetro NomeParâmetro);
         // void Cadastrar();

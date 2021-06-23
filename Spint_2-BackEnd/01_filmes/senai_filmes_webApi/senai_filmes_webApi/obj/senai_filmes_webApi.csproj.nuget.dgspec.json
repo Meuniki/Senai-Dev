@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {}
+    "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {
+    "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
         "projectName": "senai_filmes_webApi",
-        "projectPath": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
-        "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\obj\\",
+        "projectPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\senai_filmes_webApi.csproj",
+        "packagesPath": "C:\\Users\\45495433882\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\01_filmes\\senai_filmes_webApi\\senai_filmes_webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\45495433882\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,17 +40,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[5.0.5, )"
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[6.11.0, )"
             }
           },
           "imports": [
@@ -71,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

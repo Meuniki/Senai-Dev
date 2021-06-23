@@ -18,9 +18,10 @@ namespace senai_filmes_webApi.Repositories
         /// String de conexão de dados que recebe os parâmetros
         /// Data Source = Nome do servidaor
         /// Initial catalogo = Nome do Banco
-        /// Integrated security = Uda
+        /// user id=sa; pwd=senai@132 = Faz a autenticação com o usuário do SQL Server, passando logon e senha
+        /// Integrated security = Faz a autenticação com o usuário do Sistema (Windows)
         /// </summary>
-        private string stringConexao = "Data Source=DESKTOP-RSQ1KON; initial catalog=Filmes; integrated security=true";
+        private string stringConexao = "Data Source=LAB08DESK115999\\SQLEXPRESS; initial catalog=Filmes; integrated security=true";
 
         /// <summary>
         /// Atualiza um gênero passando o id pelo corpo
@@ -50,8 +51,6 @@ namespace senai_filmes_webApi.Repositories
                     cmd.ExecuteNonQuery();
                 }
             }
-        
-        
         
         }
 
@@ -167,8 +166,6 @@ namespace senai_filmes_webApi.Repositories
                     // Executa a querry
                     cmd.ExecuteNonQuery();
                 }
-
-
             }
         }
 
@@ -241,8 +238,8 @@ namespace senai_filmes_webApi.Repositories
                         listaGeneros.Add(genero);
                     }
                 }
-
             }
+
             // REtorna a lista de gêneros
             return listaGeneros;
         }

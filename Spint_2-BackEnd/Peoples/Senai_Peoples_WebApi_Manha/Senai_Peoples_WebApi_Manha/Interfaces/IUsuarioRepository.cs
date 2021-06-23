@@ -1,8 +1,4 @@
 ﻿using Senai_Peoples_WebApi_Manha.Domains;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Senai_Peoples_WebApi_Manha.Interfaces
 {
