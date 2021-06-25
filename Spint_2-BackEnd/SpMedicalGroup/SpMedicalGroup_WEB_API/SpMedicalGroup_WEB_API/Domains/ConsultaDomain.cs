@@ -20,7 +20,7 @@ namespace SpMedicalGroup_WebApi.Domains
 
         public int IdMedico { get; set; }
 
-        public int Prontuario { get; set; }
+        public int IdPaciente { get; set; }
 
     }
 }

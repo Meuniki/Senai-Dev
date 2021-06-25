@@ -64,8 +64,8 @@ CREATE TABLE Pacientes(
 GO
 
 CREATE TABLE Consultas(
-	IdConsultas INT PRIMARY KEY IDENTITY,
-	IdProntuario INT FOREIGN KEY REFERENCES Pacientes(IdPacientes),
+	IdConsulta INT PRIMARY KEY IDENTITY,
+	IdPaciente INT FOREIGN KEY REFERENCES Pacientes(IdPacientes),
 	IdMedico INT FOREIGN KEY REFERENCES Medicos(IdMedico),
 	DataConsulta DATETIME NOT NULL,
 	Situacao VARCHAR(200) NOT NULL,

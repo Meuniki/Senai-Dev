@@ -9,7 +9,7 @@ namespace SpMedicalGroup_WebApi.Interfaces
     /// <summary>
     /// Interface responsavel pelo repositorio MedicoRepository
     /// </summary>
-    public interface IMedicoReposiroty
+    public interface IMedicoRepository
     {
         /// <summary>
         /// Retorna Todos medicos
