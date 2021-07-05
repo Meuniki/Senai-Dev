@@ -19,9 +19,34 @@ namespace SpMedicalGroup_WebApi.Repositories
         /// </summary>
         SpMedicalContext ctx = new SpMedicalContext();
 
-        public void Atualizar(int id, Clinica clinicaAtualizada)
-        {
-            throw new NotImplementedException();
+        /// <summary>
+        /// Atualizauma clinica existente
+        /// </summary>
+        /// <param name="id">ID da clinica que será atualizada</param>
+        /// <param name="clinicaAtualizada">Objeto clinicaAtualizada com as novas informações</param>
+        public void Atualizar(int id, Clinica clinicaAtualizada){
+
+            Clinica clinicaBuscada = ctx.Clinicas.Find(id);
+
+            if (clinicaAtualizada.Nome != null){
+                clinicaBuscada.Nome = clinicaAtualizada.Nome;
+            }
+
+            if (clinicaAtualizada.Cnpj != null){
+                clinicaBuscada.Cnpj = clinicaAtualizada.Cnpj;
+            }
+
+            if (clinicaAtualizada.RazaoSocial != null){
+                clinicaBuscada.RazaoSocial = clinicaAtualizada.RazaoSocial;
+            }
+
+            if (clinicaAtualizada.Endereco != null){
+                clinicaBuscada.Endereco = clinicaAtualizada.Endereco;
+            }
+
+            ctx.Clinicas.Update(clinicaBuscada);
+
+            ctx.SaveChanges();
         }
 
         /// <summary>

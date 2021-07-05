@@ -67,5 +67,32 @@ namespace SpMedicalGroup_WebApi.Controllers{
 
             return StatusCode(201);
         }
+
+        /// <summary>
+        /// Atualiza uma clinica existente
+        /// </summary>
+        /// <param name="id">ID da clinica que será atualizada</param>
+        /// <param name="clinicaAtualizada">Objeto da clinicaAtualizada com as novas informações </param>
+        /// <returns> Um status code 204 - No Content</returns>
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Clinica clinicaAtualizada)
+        {
+            _clinicarepository.Atualizar(id, clinicaAtualizada);
+
+            return StatusCode(204);
+        }
+
+        /// <summary>
+        /// Deleta uma clinica existente
+        /// </summary>
+        /// <param name="id">ID da clinica que será deletada</param>
+        /// <returns>Um status code 204 - No Content</returns>
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _clinicarepository.Deletar(id);
+
+            return StatusCode(204);
+        }
     }
 }
