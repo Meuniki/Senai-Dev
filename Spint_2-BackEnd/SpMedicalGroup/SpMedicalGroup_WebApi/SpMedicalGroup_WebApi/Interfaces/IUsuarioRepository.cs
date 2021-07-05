@@ -33,8 +33,9 @@ namespace SpMedicalGroup_WebApi.Interfaces
         /// <summary>
         /// Atualiza um usuário existente passando id pelo corpo da requisição
         /// </summary>
-        /// <param name="usuario">Objeto usuário a ser atualizado</param>
-        void Atualizar(Usuario usuario);
+        /// <param name="id"> id da usuario a ser atualizado</param>
+        /// <param name="usuarioAtualizada"> Objeto usuario a ser atualizado</param>
+        void Atualizar(int id, Usuario usuarioAtualizada);
 
         /// <summary>
         /// Deleta um usuario

@@ -24,6 +24,10 @@ namespace SpMedicalGroup_WebApi.Interfaces
         /// <returns>Um objeto do tipo Consulta que foi buscado</returns>
         Consulta BuscarPorId(int id);
 
+        Consulta BuscaUmMedico(int id);
+
+        Consulta BuscaUmPaciente(int id);
+
         /// <summary>
         /// Cadastra um novo objeto Consulta
         /// </summary>
@@ -31,10 +35,11 @@ namespace SpMedicalGroup_WebApi.Interfaces
         void Cadastrar(Consulta novoConsulta);
 
         /// <summary>
-        /// Atualiza uma consulta existente passando id pelo corpo da requisição
+        /// Atualiza um usuário existente passando id pelo corpo da requisição
         /// </summary>
-        /// <param name="consulta">Objeto usuário a ser atualizado</param>
-        void Atualizar(Consulta consulta);
+        /// <param name="id"> id da consulta a ser atualizado</param>
+        /// <param name="consultaAtualizada"> Objeto consulta a ser atualizado</param>
+        void Atualizar(int id, Consulta consultaAtualizada);
 
         /// <summary>
         /// Deleta uma consulta

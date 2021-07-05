@@ -31,10 +31,11 @@ namespace SpMedicalGroup_WebApi.Interfaces
         void Cadastrar(Medico novoMedico);
 
         /// <summary>
-        /// Atualiza um medico existente passando id pelo corpo da requisição
+        /// Atualiza um usuário existente passando id pelo corpo da requisição
         /// </summary>
-        /// <param name="medico">Objeto usuário a ser atualizado</param>
-        void Atualizar(Medico medico);
+        /// <param name="id"> id da medico a ser atualizado</param>
+        /// <param name="medicoAtualizada"> Objeto medico a ser atualizado</param>
+        void Atualizar(int id, Medico medicoAtualizada);
 
         /// <summary>
         /// Deleta um medico

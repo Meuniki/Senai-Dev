@@ -13,6 +13,9 @@
         "packagesPath": "C:\\Users\\45495433882\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\45495433882\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

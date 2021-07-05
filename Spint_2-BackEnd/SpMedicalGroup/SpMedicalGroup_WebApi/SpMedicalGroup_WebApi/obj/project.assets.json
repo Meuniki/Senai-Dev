@@ -7333,7 +7333,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\45495433882\\.nuget\\packages\\": {}
+    "C:\\Users\\45495433882\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7344,6 +7345,9 @@
       "packagesPath": "C:\\Users\\45495433882\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\45495433882\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

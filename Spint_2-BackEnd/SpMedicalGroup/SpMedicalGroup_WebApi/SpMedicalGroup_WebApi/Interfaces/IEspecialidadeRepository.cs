@@ -33,8 +33,9 @@ namespace SpMedicalGroup_WebApi.Interfaces
         /// <summary>
         /// Atualiza um usuário existente passando id pelo corpo da requisição
         /// </summary>
-        /// <param name="especialidade">Objeto especialidade a ser atualizado</param>
-        void Atualizar(Especialidade especialidade);
+        /// <param name="id"> id da especialidade a ser atualizado</param>
+        /// <param name="especialidadeAtualizada"> Objeto especialidade a ser atualizado</param>
+        void Atualizar(int id, Especialidade especialidadeAtualizada);
 
         /// <summary>
         /// Deleta uma especialidade
