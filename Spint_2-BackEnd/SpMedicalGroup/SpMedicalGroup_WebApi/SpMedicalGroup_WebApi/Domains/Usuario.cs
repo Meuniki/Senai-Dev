@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -14,7 +15,11 @@ namespace SpMedicalGroup_WebApi.Domains
         }
 
         public int IdUsuario { get; set; }
+
+        [Required (ErrorMessage ="Email é obrigatório")]
         public string Email { get; set; }
+
+        [Required (ErrorMessage = "Senha é obrigatória")]
         public string Senha { get; set; }
         public int? IdTipoUsuario { get; set; }
 

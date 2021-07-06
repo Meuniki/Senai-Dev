@@ -12,8 +12,14 @@ namespace SpMedicalGroup_WebApi.Domains
 
         [Required(ErrorMessage = "Deve haver um paciente")]
         public int? IdPaciente { get; set; }
+
+        [Required(ErrorMessage ="Deve haver um medico")]
         public int? IdMedico { get; set; }
+
+        [Required(ErrorMessage ="Deve haver uma data")]
         public DateTime DataConsulta { get; set; }
+
+        [Required(ErrorMessage ="Deve haver uma Situação")]
         public string Situacao { get; set; }
         public string Descricao { get; set; }
 

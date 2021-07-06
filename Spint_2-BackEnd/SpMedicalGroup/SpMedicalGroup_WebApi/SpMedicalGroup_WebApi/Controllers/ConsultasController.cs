@@ -31,13 +31,21 @@ namespace SpMedicalGroup_WebApi.Controllers
         /// <summary>
         /// Lista todas Consultas
         /// </summary>
-        /// <returns>Uma lista de Consultas e um status code</returns>
+        /// <returns>Uma lista de Consultas e um status code 200 - Ok</returns>
         /// dominio/api/consultas
         [HttpGet]
         public IActionResult Get()
         {
 
-            return Ok(_consultarepository.ListarTodos());
+            try
+            {
+                return Ok(_consultarepository.ListarTodos());
+            }
+            catch (Exception ex )
+            {
+
+                return BadRequest(ex);
+            }
         }
 
         /// <summary>
@@ -90,4 +98,5 @@ namespace SpMedicalGroup_WebApi.Controllers
 
             return StatusCode(204);
         }
+    }
 }
