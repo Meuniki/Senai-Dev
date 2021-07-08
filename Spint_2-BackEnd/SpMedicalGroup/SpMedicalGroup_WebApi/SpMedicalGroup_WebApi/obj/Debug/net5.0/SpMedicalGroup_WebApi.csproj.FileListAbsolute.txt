@@ -128,3 +128,11 @@ C:\Users\marce\OneDrive\Área de Trabalho\Ruben\Tecnico\Senai-Dev\Spint_2-BackEn
 C:\Users\marce\OneDrive\Área de Trabalho\Ruben\Tecnico\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\obj\Debug\net5.0\SpMedicalGroup_WebApi.xml
 C:\Users\marce\OneDrive\Área de Trabalho\Ruben\Tecnico\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\obj\Debug\net5.0\SpMedicalGroup_WebApi.pdb
 C:\Users\marce\OneDrive\Área de Trabalho\Ruben\Tecnico\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\obj\Debug\net5.0\SpMedicalGroup_WebApi.genruntimeconfig.cache
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\bin\Debug\net5.0\SpMedicalGroup_WebApi.xml
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\obj\Debug\net5.0\SpMedicalGroup_WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\45495433882\Desktop\Senai-Dev\Spint_2-BackEnd\SpMedicalGroup\SpMedicalGroup_WebApi\SpMedicalGroup_WebApi\obj\Debug\net5.0\SpMedicalGroup_WebApi.xml

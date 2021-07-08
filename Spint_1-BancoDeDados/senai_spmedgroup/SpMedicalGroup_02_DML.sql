@@ -55,13 +55,13 @@ INSERT INTO Medicos(CRM,Nome,IdEspecialidade,IdClinica, IdUsuario) VALUES
 GO
 
 INSERT INTO Pacientes(Nome,DataNascimento,Telefone,RG,CPF,Endereco,IdUsuario)VALUES
-			('Ligia', '1983-10-13', '11 3456-7654', '43522543-5', '94839859000', 'Rua Estado de Israel 240, São Paulo, Estado de São Paulo, 04022-000',1),
-			('Alexandre', '2001-7-23', '11 98765-6543', '32654345-7', '73556944057', 'Av. Paulista, 1578 - Bela Vista, São Paulo - SP, 01310-200',1),
-			('Fernando', '1978-10-10', '11 97208-4453', '54636525-3', '16839338002', 'Av. Ibirapuera - Indianópolis, 2927,  São Paulo - SP, 04029-200',1),
-			('Henrique', '1985-10-13', '11 3456-6543', '54366362-5', '14332654765', 'R. Vitória, 120 - Vila Sao Jorge, Barueri - SP, 06402-030',1),
-			('João', '1975-8-27', '11 7656-6377', '53254444-1', '91305348010', 'R. Ver. Geraldo de Camargo, 66 - Santa Luzia, Ribeirão Pires - SP, 09405-380',1),
-			('Bruno', '1972-3-21', '11 95436-8769', '54566266-7', '79799299004', 'Alameda dos Arapanés, 945 - Indianópolis, São Paulo - SP, 04524-001',1),
-			('Mariana', '2018-3-5', 'NULL', '54566266-8', '13771913039', 'R Sao Antonio, 232 - Vila Universal, Barueri - SP, 06407-140',1)
+			('Ligia', '1983-10-13', '11 3456-7654', '43522543-5', '94839859000', 'Rua Estado de Israel 240, São Paulo, Estado de São Paulo, 04022-000',4),
+			('Alexandre', '2001-7-23', '11 98765-6543', '32654345-7', '73556944057', 'Av. Paulista, 1578 - Bela Vista, São Paulo - SP, 01310-200',5),
+			('Fernando', '1978-10-10', '11 97208-4453', '54636525-3', '16839338002', 'Av. Ibirapuera - Indianópolis, 2927,  São Paulo - SP, 04029-200',6),
+			('Henrique', '1985-10-13', '11 3456-6543', '54366362-5', '14332654765', 'R. Vitória, 120 - Vila Sao Jorge, Barueri - SP, 06402-030',7),
+			('João', '1975-8-27', '11 7656-6377', '53254444-1', '91305348010', 'R. Ver. Geraldo de Camargo, 66 - Santa Luzia, Ribeirão Pires - SP, 09405-380',8),
+			('Bruno', '1972-3-21', '11 95436-8769', '54566266-7', '79799299004', 'Alameda dos Arapanés, 945 - Indianópolis, São Paulo - SP, 04524-001',9),
+			('Mariana', '2018-3-5', 'NULL', '54566266-8', '13771913039', 'R Sao Antonio, 232 - Vila Universal, Barueri - SP, 06407-140',10)
 ;
 GO
 
@@ -75,3 +75,8 @@ INSERT INTO Consultas(IdPaciente,IdMedico,DataConsulta,Situacao, Descricao) VALU
 			(7,3,'2020-3-8 15:00:00','Agendada', NULL),
 			(4,1,'2020-3-9 11:00:00','Agendada', NULL);
 GO
+
+
+SELECT * FROM Usuarios
+SELECT * FROM Consultas
+SELECT * FROM Pacientes

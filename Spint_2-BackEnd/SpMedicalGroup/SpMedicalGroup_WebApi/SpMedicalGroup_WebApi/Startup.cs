@@ -37,7 +37,7 @@ namespace SpMedicalGroup_WebApi
                 options.DefaultChallengeScheme = "JwtBearer";
             })
 
-            .AddJwtBearer("JwtBrearer", options => 
+            .AddJwtBearer("JwtBearer", options => 
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {

@@ -1,4 +1,5 @@
-﻿using SpMedicalGroup_WebApi.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using SpMedicalGroup_WebApi.Contexts;
 using SpMedicalGroup_WebApi.Domains;
 using SpMedicalGroup_WebApi.Interfaces;
 using System;
@@ -15,7 +16,7 @@ namespace SpMedicalGroup_WebApi.Repositories
         /// </summary>
         SpMedicalContext ctx = new SpMedicalContext();
 
-        public void Atualizar(int id,Consulta consultaAtualizada)
+        public void Atualizar(int id, Consulta consultaAtualizada)
         {
 
             Consulta consultaBuscada = ctx.Consultas.Find(id);
@@ -39,7 +40,7 @@ namespace SpMedicalGroup_WebApi.Repositories
             {
                 consultaBuscada.Situacao = consultaAtualizada.Situacao;
             }
-            
+
             if (consultaAtualizada.Descricao != null)
             {
                 consultaBuscada.Descricao = consultaAtualizada.Descricao;
@@ -96,6 +97,21 @@ namespace SpMedicalGroup_WebApi.Repositories
             // Salva as alterações
             ctx.SaveChanges();
         }
+        /// <summary>
+        /// Lista todos os eventos que um determinado usuário participa
+        /// </summary>
+        /// <param name="id">ID do usuário que participa dos eventos listados</param>
+        /// <returns>
+        public List<Consulta> ListarMinhas(int id)
+        {
+            return ctx.Consultas
+
+                .Include(p => p.IdPacienteNavigation)
+                .Include(p => p.IdMedicoNavigation)
+                .Where(p => p.IdPacienteNavigation.IdUsuario == id)
+                .ToList();
+        }
+
 
         /// <summary>
         /// Lista todas as consultas

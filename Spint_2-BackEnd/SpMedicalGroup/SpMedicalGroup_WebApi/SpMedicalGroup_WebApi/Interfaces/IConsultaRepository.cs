@@ -29,6 +29,13 @@ namespace SpMedicalGroup_WebApi.Interfaces
         Consulta BuscaUmPaciente(int id);
 
         /// <summary>
+        /// Lista todos os consultas que um determinado usuário realizou
+        /// </summary>
+        /// <param name="id">id do usuario </param>
+        /// <returns>Uma lista de consultas com os dados das consultas</returns>
+        List<Consulta> ListarMinhas(int id);
+
+        /// <summary>
         /// Cadastra um novo objeto Consulta
         /// </summary>
         /// <param name="novoConsulta">Objeto Consulta que será cadastrado</param>

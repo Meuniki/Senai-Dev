@@ -24,7 +24,7 @@ namespace SpMedicalGroup_WebApi.Repositories
             throw new NotImplementedException();
         }
 
-        public void Cadastrar(Usuario novoUsuario)
+        public void Cadastrar(Usuario novoUsuario) 
         {
             throw new NotImplementedException();
         }

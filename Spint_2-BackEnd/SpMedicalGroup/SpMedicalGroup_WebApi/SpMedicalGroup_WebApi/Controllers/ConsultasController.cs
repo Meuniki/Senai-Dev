@@ -6,6 +6,7 @@ using SpMedicalGroup_WebApi.Interfaces;
 using SpMedicalGroup_WebApi.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -67,6 +68,35 @@ namespace SpMedicalGroup_WebApi.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex);
+            }
+        }
+
+        /// <summary>
+        /// Lista todos as presenças de um determinado usuário
+        /// </summary>
+        /// <returns>Uma lista de presenças e um status code 200 - Ok</returns>
+        /// dominio/api/presencas/minhas
+        // Define que somente o usuário comum pode acessar o método
+        //[Authorize(Roles = "2")]
+        [HttpGet("minhas")]
+        public IActionResult GetMy()
+        {
+            try
+            {
+                // Cria uma variável idUsuario que recebe o valor do ID do usuário que está logado
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                // Retora a resposta da requisição 200 - OK fazendo a chamada para o método e trazendo a lista
+                return Ok(_consultarepository.ListarMinhas(idUsuario));
+            }
+            catch (Exception error)
+            {
+                // Retorna a resposta da requisição 400 - Bad Request e o erro ocorrido
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar as presenças se o usuário não estiver logado!",
+                    error
+                });
             }
         }
 

@@ -4,52 +4,6 @@
         <name>SpMedicalGroup_WebApi</name>
     </assembly>
     <members>
-        <member name="P:SpMedicalGroup_WebApi.Controllers.ClinicasController._clinicarepository">
-            <summary>
-            Objeto _clinicaRepository que irá receber todos métodos definidos na interface IClinicaRepository
-            </summary>
-        </member>
-        <member name="M:SpMedicalGroup_WebApi.Controllers.ClinicasController.#ctor">
-            <summary>
-            Instancia o objeto _clinicaRepository para que haja a rferência aos métodos no repositório
-            </summary>
-        </member>
-        <member name="M:SpMedicalGroup_WebApi.Controllers.ClinicasController.Get">
-            <summary>
-            Lista todas Clinicas
-            </summary>
-            <returns>Uma lista de Clinicas e um status code</returns>
-            dominio/api/clinicas
-        </member>
-        <member name="M:SpMedicalGroup_WebApi.Controllers.ClinicasController.GetById(System.Int32)">
-            <summary>
-            Busca uma clinica através do sei ID
-            </summary>
-            <param name="id">ID da clinica a ser buscada</param>
-            <returns>Uma clinica encontrada e um status code 200 - Ok</returns>
-        </member>
-        <member name="M:SpMedicalGroup_WebApi.Controllers.ClinicasController.Post(SpMedicalGroup_WebApi.Domains.Clinica)">
-            <summary>
-            Cadastra uma nova clinica
-            </summary>
-            <param name="novaClinica">Objeto novaClinica que será cadastrada</param>
-            <returns>Um status 201 - Created</returns>
-        </member>
-        <member name="M:SpMedicalGroup_WebApi.Controllers.ClinicasController.Put(System.Int32,SpMedicalGroup_WebApi.Domains.Clinica)">
-            <summary>
-            Atualiza uma clinica existente
-            </summary>
-            <param name="id">ID da clinica que será atualizada</param>
-            <param name="clinicaAtualizada">Objeto da clinicaAtualizada com as novas informações </param>
-            <returns> Um status code 204 - No Content</returns>
-        </member>
-        <member name="M:SpMedicalGroup_WebApi.Controllers.ClinicasController.Delete(System.Int32)">
-            <summary>
-            Deleta uma clinica existente
-            </summary>
-            <param name="id">ID da clinica que será deletada</param>
-            <returns>Um status code 204 - No Content</returns>
-        </member>
         <member name="P:SpMedicalGroup_WebApi.Controllers.ConsultasController._consultarepository">
             <summary>
             Objeto _consultaRepository que irá receber todos métodos definidos na interface IConsultaRepository
@@ -66,6 +20,7 @@
             </summary>
             <returns>Uma lista de Consultas e um status code 200 - Ok</returns>
             dominio/api/consultas
+            o usuário precisa estar logado para listar todos os gêneros
         </member>
         <member name="M:SpMedicalGroup_WebApi.Controllers.ConsultasController.GetById(System.Int32)">
             <summary>
@@ -73,6 +28,14 @@
             </summary>
             <param name="id">ID da consulta a ser buscada</param>
             <returns>Uma consulta encontrada e um status code 200 - Ok</returns>
+            somente o usuário administradores e medicos pode buscar pelo id
+        </member>
+        <member name="M:SpMedicalGroup_WebApi.Controllers.ConsultasController.GetMy">
+            <summary>
+            Lista todos as presenças de um determinado usuário
+            </summary>
+            <returns>Uma lista de presenças e um status code 200 - Ok</returns>
+            dominio/api/presencas/minhas
         </member>
         <member name="M:SpMedicalGroup_WebApi.Controllers.ConsultasController.Post(SpMedicalGroup_WebApi.Domains.Consulta)">
             <summary>
@@ -95,6 +58,13 @@
             </summary>
             <param name="id">ID da consulta que será deletada</param>
             <returns>Um status code 204 - No Content</returns>
+        </member>
+        <member name="M:SpMedicalGroup_WebApi.Controllers.LoginController.Post(SpMedicalGroup_WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            Faz a autenticação do usuário
+            </summary>
+            <param name="login">objeto com os dados de e-mail e senha</param>
+            <returns>Um status code e, em caso de sucesso, os dados do usuário buscado</returns>
         </member>
         <member name="T:SpMedicalGroup_WebApi.Interfaces.IClinicaRepository">
             <summary>
@@ -150,6 +120,13 @@
             </summary>
             <param name="id">id da consulta a ser buscado</param>
             <returns>Um objeto do tipo Consulta que foi buscado</returns>
+        </member>
+        <member name="M:SpMedicalGroup_WebApi.Interfaces.IConsultaRepository.ListarMinhas(System.Int32)">
+            <summary>
+            Lista todos os consultas que um determinado usuário realizou
+            </summary>
+            <param name="id">id do usuario </param>
+            <returns>Uma lista de consultas com os dados das consultas</returns>
         </member>
         <member name="M:SpMedicalGroup_WebApi.Interfaces.IConsultaRepository.Cadastrar(SpMedicalGroup_WebApi.Domains.Consulta)">
             <summary>
@@ -392,6 +369,7 @@
             </summary>
             <param name="id"></param>
         </member>
+        <!-- Badly formed XML comment ignored for member "M:SpMedicalGroup_WebApi.Repositories.ConsultaRepository.ListarMinhas(System.Int32)" -->
         <member name="M:SpMedicalGroup_WebApi.Repositories.ConsultaRepository.ListarTodos">
             <summary>
             Lista todas as consultas
