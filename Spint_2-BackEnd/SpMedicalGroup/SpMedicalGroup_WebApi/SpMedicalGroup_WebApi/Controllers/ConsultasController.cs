@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SpMedicalGroup_WebApi.Domains;
 using SpMedicalGroup_WebApi.Interfaces;
@@ -33,6 +34,8 @@ namespace SpMedicalGroup_WebApi.Controllers
         /// </summary>
         /// <returns>Uma lista de Consultas e um status code 200 - Ok</returns>
         /// dominio/api/consultas
+        /// o usuário precisa estar logado para listar todos os gêneros
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -43,7 +46,6 @@ namespace SpMedicalGroup_WebApi.Controllers
             }
             catch (Exception ex )
             {
-
                 return BadRequest(ex);
             }
         }
@@ -53,10 +55,19 @@ namespace SpMedicalGroup_WebApi.Controllers
         /// </summary>
         /// <param name="id">ID da consulta a ser buscada</param>
         /// <returns>Uma consulta encontrada e um status code 200 - Ok</returns>
+        /// somente o usuário administradores e medicos pode buscar pelo id
+        [Authorize(Roles = "2, 3")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_consultarepository.BuscarPorId(id));
+            try
+            {
+                return Ok(_consultarepository.BuscarPorId(id));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         /// <summary>

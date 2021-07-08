@@ -20,6 +20,7 @@ namespace SpMedicalGroup_WebApi.Domains
         public string Email { get; set; }
 
         [Required (ErrorMessage = "Senha é obrigatória")]
+        [StringLength(20, MinimumLength = 3, ErrorMessage =" O campo senha deve ter no mínimo 3 caracteres")]
         public string Senha { get; set; }
         public int? IdTipoUsuario { get; set; }
 

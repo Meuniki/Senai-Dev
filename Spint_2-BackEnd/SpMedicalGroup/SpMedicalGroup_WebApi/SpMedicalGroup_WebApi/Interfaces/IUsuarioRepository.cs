@@ -12,6 +12,13 @@ namespace SpMedicalGroup_WebApi.Interfaces
     public interface IUsuarioRepository
     {
         /// <summary>
+        /// Valida o usuário
+        /// </summary>
+        /// <param name="email">e-mail do usuário</param>
+        /// <param name="senha">senha do usuário</param>
+        /// <returns>Um objeto do tipo usuário que foi busacado </returns>
+        Usuario Login(string email, string senha);
+        /// <summary>
         /// Retorna Todos Usuarios
         /// </summary>
         /// <returns>Uma lista de Usuarios</returns>

@@ -41,7 +41,8 @@ INSERT INTO Usuarios(Email,Senha,IdTipoUsuario) VALUES
 			('henrique@gmail.com','jkl',1),
 			('joao@hotmail.com','mno',1),
 			('bruno@gmail.com','pqr',1),
-			('mariana@outlook.com','stu',1)
+			('mariana@outlook.com','stu',1),
+			('adm','adm',3)
 GO
 
 INSERT INTO Clinicas(Nome,CNPJ,RazaoSocial,Endereco) VALUES
