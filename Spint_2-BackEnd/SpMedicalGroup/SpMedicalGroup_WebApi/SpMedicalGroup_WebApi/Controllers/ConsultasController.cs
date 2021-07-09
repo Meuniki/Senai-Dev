@@ -77,7 +77,7 @@ namespace SpMedicalGroup_WebApi.Controllers
         /// <returns>Uma lista de presenças e um status code 200 - Ok</returns>
         /// dominio/api/presencas/minhas
         // Define que somente o usuário comum pode acessar o método
-        //[Authorize(Roles = "2")]
+        [Authorize(Roles = "1")]
         [HttpGet("minhas")]
         public IActionResult GetMy()
         {
@@ -105,6 +105,7 @@ namespace SpMedicalGroup_WebApi.Controllers
         /// </summary>
         /// <param name="novaConsulta">Objeto novaConsulta que será cadastrada</param>
         /// <returns>Um status 201 - Created</returns>
+        [Authorize(Roles = "3")]
         [HttpPost]
         public IActionResult Post(Consulta novaConsulta)
         {
@@ -119,6 +120,8 @@ namespace SpMedicalGroup_WebApi.Controllers
         /// <param name="id">ID da consulta que será atualizada</param>
         /// <param name="consultaAtualizada">Objeto da consultaAtualizada com as novas informações </param>
         /// <returns> Um status code 204 - No Content</returns>
+        /// 
+        [Authorize (Roles = "2")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Consulta consultaAtualizada)
         {
@@ -132,6 +135,8 @@ namespace SpMedicalGroup_WebApi.Controllers
         /// </summary>
         /// <param name="id">ID da consulta que será deletada</param>
         /// <returns>Um status code 204 - No Content</returns>
+        /// 
+        [Authorize (Roles = "2,3")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

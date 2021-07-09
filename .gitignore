@@ -39,3 +39,26 @@ luac.out
 *.x86_64
 *.hex
 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+Sprint_4-FrontEnd/sp_medical_group/node_modules
+Sprint_4-FrontEnd/sp_medical_group/.pnp
+Sprint_4-FrontEnd/sp_medical_group/.pnp.js
+
+# testing
+Sprint_4-FrontEnd/sp_medical_group/coverage
+
+# production
+Sprint_4-FrontEnd/sp_medical_group/build
+
+# misc
+Sprint_4-FrontEnd/sp_medical_group/.DS_Store
+Sprint_4-FrontEnd/sp_medical_group/.env.local
+Sprint_4-FrontEnd/sp_medical_group/.env.development.local
+Sprint_4-FrontEnd/sp_medical_group/.env.test.local
+Sprint_4-FrontEnd/sp_medical_group/.env.production.local
+
+Sprint_4-FrontEnd/sp_medical_group/npm-debug.log*
+Sprint_4-FrontEnd/sp_medical_group/yarn-debug.log*
+Sprint_4-FrontEnd/sp_medical_group/yarn-error.log*

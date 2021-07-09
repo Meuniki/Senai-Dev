@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj": {}
+    "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj": {
+    "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj",
         "projectName": "SpMedicalGroup_WebApi",
-        "projectPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj",
-        "packagesPath": "C:\\Users\\45495433882\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\obj\\",
+        "projectPath": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi.csproj",
+        "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\Spint_2-BackEnd\\SpMedicalGroup\\SpMedicalGroup_WebApi\\SpMedicalGroup_WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45495433882\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
