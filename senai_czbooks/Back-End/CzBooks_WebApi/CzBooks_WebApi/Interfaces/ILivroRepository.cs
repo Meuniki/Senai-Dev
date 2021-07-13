@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CzBooks_WebApi.Interfaces
 {
+    /// <summary>
+    /// Interface responsavel pelo repositorio Livro
+    /// </summary>
     interface ILivroRepository
     {
         /// <summary>
@@ -19,7 +22,7 @@ namespace CzBooks_WebApi.Interfaces
         /// </summary>
         /// <param name="id">ID do autor que será buscado</param>
         /// <returns>Uma lista de livros de um determinado autor</returns>
-        List<Livro> ListarMeus( int id);
+        List<Livro> ListarMeus(int id);
 
         /// <summary>
         /// Busca um usuário atracés do deu ID
@@ -39,7 +42,5 @@ namespace CzBooks_WebApi.Interfaces
         /// </summary>
         /// <param name="id">ID do usuário que será deletado</param>
         void Deletar(int id);
-
-
     }
 }

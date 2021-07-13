@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CzBooks_WebApi.Interfaces
 {
+    /// <summary>
+    /// Interface responsavel pelo repositorio Livraria
+    /// </summary>
     interface ILivrariaRepository
     {
         /// <summary>
@@ -23,8 +26,8 @@ namespace CzBooks_WebApi.Interfaces
         /// <summary>
         /// Cadastra uma novo livraria
         /// </summary>
-        /// <param name="novolLvraria">Objeto novoLivraria que será cadastrado</param>
-        void Cadastrar(Livraria novoLivraria);
+        /// <param name="novaLivraria">Objeto novoLivraria que será cadastrado</param>
+        void Cadastrar(Livraria novaLivraria);
 
         /// <summary>
         /// Deleta uma livraria existente

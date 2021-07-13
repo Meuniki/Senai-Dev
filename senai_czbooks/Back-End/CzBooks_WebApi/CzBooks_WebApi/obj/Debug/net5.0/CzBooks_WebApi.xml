@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CzBooks_WebApi</name>
+    </assembly>
+    <members>
+        <member name="P:CzBooks_WebApi.Controllers.CategoriasController._categoriaRepository">
+            <summary>
+            Objeto _categoriaRepository que irá receber todos métodos definidos na interface ICategoriaReposioty
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.CategoriasController.#ctor">
+            <summary>
+            Instacia o objeto _categoriaRepository para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.CategoriasController.Get">
+            <summary>
+            Lista todas as categoria
+            </summary>
+            <returns>Uma lista de categoria e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.CategoriasController.Post(CzBooks_WebApi.Domains.Categoria)">
+            <summary>
+            Cadastra uma nova categoria
+            </summary>
+            <param name="novaCategoria">Objeto novoCategoria que será cadastrada</param>
+            <returns>Um status 201 - Created</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.CategoriasController.Delete(System.Int32)">
+            <summary>
+            Deleta uma categoria existente
+            </summary>
+            <param name="id">ID da categoria que será deletada</param>
+            <returns>Um status code 204 - No Content</returns>
+            
+        </member>
+        <member name="P:CzBooks_WebApi.Controllers.LivrariasController._livrariaRepository">
+            <summary>
+            Objeto _livrariaRepository que irá receber todos métodos definidos na interface ILivrariaReposioty
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrariasController.#ctor">
+            <summary>
+            Instacia o objeto _livrariaRepository para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrariasController.Get">
+            <summary>
+            Lista todas as livraria
+            </summary>
+            <returns>Uma lista de livraria e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrariasController.Post(CzBooks_WebApi.Domains.Livraria)">
+            <summary>
+            Cadastra uma nova livraria
+            </summary>
+            <param name="novaLivraria">Objeto novoLivraria que será cadastrada</param>
+            <returns>Um status 201 - Created</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrariasController.Delete(System.Int32)">
+            <summary>
+            Deleta uma livraria existente
+            </summary>
+            <param name="id">ID da livraria que será deletada</param>
+            <returns>Um status code 204 - No Content</returns>
+            
+        </member>
+        <member name="P:CzBooks_WebApi.Controllers.LivrosController._livroRepository">
+            <summary>
+            Objeto _livroRepository que irá receber todos métodos definidos na interface ILivroReposioty
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrosController.#ctor">
+            <summary>
+            Instacia o objeto _livroRepository para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrosController.Get">
+            <summary>
+            Lista todos os livros
+            </summary>
+            <returns>Uma lista de Livros e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrosController.Post(CzBooks_WebApi.Domains.Livro)">
+            <summary>
+            Cadastra um novo livros
+            </summary>
+            <param name="novoLivro">Objeto novoLivro que será cadastrada</param>
+            <returns>Um status 201 - Created</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrosController.Delete(System.Int32)">
+            <summary>
+            Deleta um livro existente
+            </summary>
+            <param name="id">ID do livro que será deletado</param>
+            <returns>Um status code 204 - No Content</returns>
+            
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LivrosController.GetMy">
+            <summary>
+            Lista todos as presenças de um determinado usuário
+            </summary>
+            <returns>Uma lista de presenças e um status code 200 - Ok</returns>
+            dominio/api/presencas/minhas
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.LoginController.Post(CzBooks_WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            Faz a autenticação do usuário
+            </summary>
+            <param name="login">objeto com os dados de e-mail e senha</param>
+            <returns>Um status code e, em caso de sucesso, os dados do usuário buscado</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.UsuariosController.Get">
+            <summary>
+            Lista todos os usuário
+            </summary>
+            <returns>Uma lista de usuário e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.UsuariosController.Post(CzBooks_WebApi.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto novoUsuario que será cadastrada</param>
+            <returns>Um status 201 - Created</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Controllers.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Deleta um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+            <returns>Um status code 204 - No Content</returns>
+            
+        </member>
+        <member name="T:CzBooks_WebApi.Interfaces.ICategoriaRepository">
+            <summary>
+            Interface responsavel pelo repositorio Categoria
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ICategoriaRepository.Listar">
+            <summary>
+            Lista todas categorias
+            </summary>
+            <returns>Uma lista de categorias</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ICategoriaRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca uma categoria através do deu ID
+            </summary>
+            <param name="id">ID da categoria que será buscado</param>
+            <returns>Uma categoria buscado</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ICategoriaRepository.Cadastrar(CzBooks_WebApi.Domains.Categoria)">
+            <summary>
+            Cadastra uma novo categoria
+            </summary>
+            <param name="novaCategoria">Objeto novoCategoria que será cadastrado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ICategoriaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma categoria existente
+            </summary>
+            <param name="id">ID da categoria que será deletado</param>
+        </member>
+        <member name="T:CzBooks_WebApi.Interfaces.ILivrariaRepository">
+            <summary>
+            Interface responsavel pelo repositorio Livraria
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivrariaRepository.Listar">
+            <summary>
+            Lista todas livraria
+            </summary>
+            <returns>Uma lista de livraria</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivrariaRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca uma livraria atraves do seu ID
+            </summary>
+            <param name="id">ID da livraria que será buscada</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivrariaRepository.Cadastrar(CzBooks_WebApi.Domains.Livraria)">
+            <summary>
+            Cadastra uma novo livraria
+            </summary>
+            <param name="novaLivraria">Objeto novoLivraria que será cadastrado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivrariaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma livraria existente
+            </summary>
+            <param name="id">ID da livraria que será deletado</param>
+        </member>
+        <member name="T:CzBooks_WebApi.Interfaces.ILivroRepository">
+            <summary>
+            Interface responsavel pelo repositorio Livro
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivroRepository.Listar">
+            <summary>
+            Lista todos livros
+            </summary>
+            <returns>Uma lista de livros</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivroRepository.ListarMeus(System.Int32)">
+            <summary>
+            Lista todos livros deu um autor
+            </summary>
+            <param name="id">ID do autor que será buscado</param>
+            <returns>Uma lista de livros de um determinado autor</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivroRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca um usuário atracés do deu ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivroRepository.Cadastrar(CzBooks_WebApi.Domains.Livro)">
+            <summary>
+            Cadastra Um novo usuário
+            </summary>
+            <param name="novoLivro">Objeto novoLivro que será cadastrado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.ILivroRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+        </member>
+        <member name="T:CzBooks_WebApi.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsavel pelo repositorio Usuario
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todos usuarios
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.IUsuarioRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca um usuário atracés do deu ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.IUsuarioRepository.Cadastrar(CzBooks_WebApi.Domains.Usuario)">
+            <summary>
+            Cadastra Um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto novoUsuario que será cadastrado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">e-mail do usuário</param>
+            <param name="senha">senha do usuário</param>
+            <returns>Um objeto do tipo usuário que foi busacado </returns>
+        </member>
+        <member name="T:CzBooks_WebApi.Repositories.CategoriaRepository">
+            <summary>
+            Classe responsável pelo repositorio da categoria
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.CategoriaRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca uma categoria pelo seu ID
+            </summary>
+            <param name="id">ID da categoria que será buscada</param>
+            <returns>Um objeto categoria</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.CategoriaRepository.Cadastrar(CzBooks_WebApi.Domains.Categoria)">
+            <summary>
+            Cadastra uma nova categoria
+            </summary>
+            <param name="novaCategoria">Objeto novaCategora que será cadastrada</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.CategoriaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma categoria
+            </summary>
+            <param name="id">ID da categoria que será deletada</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.CategoriaRepository.Listar">
+            <summary>
+            Lista todas categorias
+            </summary>
+            <returns>Retorna uma lista de categorias</returns>
+        </member>
+        <member name="T:CzBooks_WebApi.Repositories.LivrariaRepository">
+            <summary>
+            Classe responsável pelo repositorio da livraria
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivrariaRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca uma livraria pelo seu ID
+            </summary>
+            <param name="id">ID da livraria que será buscada</param>
+            <returns>Um objeto livraria</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivrariaRepository.Cadastrar(CzBooks_WebApi.Domains.Livraria)">
+            <summary>
+            Cadastra uma nova livraria
+            </summary>
+            <param name="novaLivraria">Objeto novaLivraria que será cadastrada</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivrariaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma livraria
+            </summary>
+            <param name="id">ID da livraria que será deletada</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivrariaRepository.Listar">
+            <summary>
+            Lista todas livrarias
+            </summary>
+            <returns>Retorna uma lista de livrarias</returns>
+        </member>
+        <member name="T:CzBooks_WebApi.Repositories.LivroRepository">
+            <summary>
+            Classe responsável pelo repositorio livro
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivroRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca um livro pelo seu ID
+            </summary>
+            <param name="id">ID do livro que será buscado</param>
+            <returns>Um objeto livro</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivroRepository.Cadastrar(CzBooks_WebApi.Domains.Livro)">
+            <summary>
+            Cadastra um nova livro
+            </summary>
+            <param name="novaLivro">Objeto novaLivro que será cadastrado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivroRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um livro
+            </summary>
+            <param name="id">ID do livro que será deletado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivroRepository.Listar">
+            <summary>
+            Lista todos livros
+            </summary>
+            <returns>Retorna uma lista de livros</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.LivroRepository.ListarMeus(System.Int32)">
+            <summary>
+             Lista todos os livros que um determinado autor escreveu
+             </summary>
+             <param name="id">ID do autor que escreveu os livros listados</param>
+             <returns>Retorna uma lista de livros</returns>
+        </member>
+        <member name="T:CzBooks_WebApi.Repositories.UsuarioRepository">
+            <summary>
+            Classe responsável pelo repositorio dos usuários
+            </summary>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.UsuarioRepository.BuscaPorId(System.Int32)">
+            <summary>
+            Busca um usuário pelo seu ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um objeto usuário</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.UsuarioRepository.Cadastrar(CzBooks_WebApi.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novaUsuario">Objeto novaUsuario que será cadastrado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.UsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.UsuarioRepository.Listar">
+            <summary>
+            Lista todos usuário
+            </summary>
+            <returns>Retorna uma lista de usuários</returns>
+        </member>
+        <member name="M:CzBooks_WebApi.Repositories.UsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">e-mail do usuário</param>
+            <param name="senha">senha do usuário</param>
+            <returns>Um objeto do tipo Usuario que foi buscado</returns>
+        </member>
+        <member name="T:CzBooks_WebApi.ViewModels.LoginViewModel">
+            <summary>
+            Classe responsável pelo modelo de Login
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CzBooks_WebApi", "CzBooks_WebApi\CzBooks_WebApi.csproj", "{A6E794E8-922F-4557-9D90-9CC74421FC00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CzBooks_WebApi", "CzBooks_WebApi\CzBooks_WebApi.csproj", "{678CCB64-9832-4D5F-89F0-408F5CA80E65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6E794E8-922F-4557-9D90-9CC74421FC00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6E794E8-922F-4557-9D90-9CC74421FC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6E794E8-922F-4557-9D90-9CC74421FC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6E794E8-922F-4557-9D90-9CC74421FC00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678CCB64-9832-4D5F-89F0-408F5CA80E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678CCB64-9832-4D5F-89F0-408F5CA80E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678CCB64-9832-4D5F-89F0-408F5CA80E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678CCB64-9832-4D5F-89F0-408F5CA80E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D16F47C8-0B51-40A7-A662-93CE8B605AEA}
+		SolutionGuid = {7D8BCBD5-B0EC-4269-ABC0-CE20CE80F643}
 	EndGlobalSection
 EndGlobal

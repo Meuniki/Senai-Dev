@@ -8,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace CzBooks_WebApi.Repositories
 {
+    /// <summary>
+    /// Classe responsável pelo repositorio da categoria
+    /// </summary>
     public class CategoriaRepository : ICategoriaRepository
     {
         CzbooksContext ctx = new CzbooksContext();
 
+        /// <summary>
+        /// Busca uma categoria pelo seu ID
+        /// </summary>
+        /// <param name="id">ID da categoria que será buscada</param>
+        /// <returns>Um objeto categoria</returns>
         public Categoria BuscaPorId(int id)
         {
             return ctx.Categorias.FirstOrDefault(e => e.IdCategoria == id);
@@ -20,10 +28,10 @@ namespace CzBooks_WebApi.Repositories
         /// <summary>
         /// Cadastra uma nova categoria
         /// </summary>
-        /// <param name="novoCategoria">Objeto novaCategora que será cadastrada</param>
-        public void Cadastrar(Categoria novoCategoria)
+        /// <param name="novaCategoria">Objeto novaCategora que será cadastrada</param>
+        public void Cadastrar(Categoria novaCategoria)
         {
-            ctx.Categorias.Add(novoCategoria);
+            ctx.Categorias.Add(novaCategoria);
 
             ctx.SaveChanges();
         }
@@ -40,7 +48,7 @@ namespace CzBooks_WebApi.Repositories
         }
 
         /// <summary>
-        /// Lista todas Categorias
+        /// Lista todas categorias
         /// </summary>
         /// <returns>Retorna uma lista de categorias</returns>
         public List<Categoria> Listar()

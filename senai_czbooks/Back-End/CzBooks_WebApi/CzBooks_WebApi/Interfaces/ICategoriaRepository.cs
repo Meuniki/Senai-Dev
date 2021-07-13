@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CzBooks_WebApi.Interfaces
 {
+    /// <summary>
+    /// Interface responsavel pelo repositorio Categoria
+    /// </summary>
     interface ICategoriaRepository
     {
         /// <summary>
@@ -24,8 +27,8 @@ namespace CzBooks_WebApi.Interfaces
         /// <summary>
         /// Cadastra uma novo categoria
         /// </summary>
-        /// <param name="novoCategoria">Objeto novoCategoria que será cadastrado</param>
-        void Cadastrar(Categoria novoCategoria);
+        /// <param name="novaCategoria">Objeto novoCategoria que será cadastrado</param>
+        void Cadastrar(Categoria novaCategoria);
 
         /// <summary>
         /// Deleta uma categoria existente

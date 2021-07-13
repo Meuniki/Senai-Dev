@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CzBooks_WebApi.Interfaces
 {
     /// <summary>
-    /// Interface responsável pelo repositorio do usuario
+    /// Interface responsavel pelo repositorio Usuario
     /// </summary>
     interface IUsuarioRepository
     {
@@ -44,4 +44,5 @@ namespace CzBooks_WebApi.Interfaces
         /// <returns>Um objeto do tipo usuário que foi busacado </returns>
         Usuario Login(string email, string senha);
     }
+
 }

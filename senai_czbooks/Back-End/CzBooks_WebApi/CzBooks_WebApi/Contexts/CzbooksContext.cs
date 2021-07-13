@@ -5,8 +5,6 @@ using CzBooks_WebApi.Domains;
 
 #nullable disable
 
-// Scaffold-DbContext "Data Source=LAB08DESK115999\SQLEXPRESS; Initial Catalog=Czbooks; Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context CzbooksContext
-
 namespace CzBooks_WebApi.Contexts
 {
     public partial class CzbooksContext : DbContext
@@ -32,7 +30,7 @@ namespace CzBooks_WebApi.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LAB08DESK115999\\SQLEXPRESS; Initial Catalog=Czbooks; Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-RSQ1KON; Initial Catalog=Czbooks; Integrated Security=True");
             }
         }
 
@@ -43,7 +41,7 @@ namespace CzBooks_WebApi.Contexts
             modelBuilder.Entity<Autor>(entity =>
             {
                 entity.HasKey(e => e.IdAutor)
-                    .HasName("PK__Autores__DD33B0310F71CC02");
+                    .HasName("PK__Autores__DD33B031EF258574");
 
                 entity.Property(e => e.Nome)
                     .HasMaxLength(500)
@@ -52,13 +50,13 @@ namespace CzBooks_WebApi.Contexts
                 entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.Autores)
                     .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__Autores__IdUsuar__412EB0B6");
+                    .HasConstraintName("FK__Autores__IdUsuar__2E1BDC42");
             });
 
             modelBuilder.Entity<Categoria>(entity =>
             {
                 entity.HasKey(e => e.IdCategoria)
-                    .HasName("PK__Categori__A3C02A10CAA498B3");
+                    .HasName("PK__Categori__A3C02A102F224ADE");
 
                 entity.Property(e => e.Tipo)
                     .IsRequired()
@@ -69,7 +67,7 @@ namespace CzBooks_WebApi.Contexts
             modelBuilder.Entity<Livraria>(entity =>
             {
                 entity.HasKey(e => e.IdLivraria)
-                    .HasName("PK__Livraria__AC9443CB66FB25FD");
+                    .HasName("PK__Livraria__AC9443CBBDF0010A");
 
                 entity.Property(e => e.Endereco)
                     .IsRequired()
@@ -85,7 +83,7 @@ namespace CzBooks_WebApi.Contexts
             modelBuilder.Entity<Livro>(entity =>
             {
                 entity.HasKey(e => e.IdLivro)
-                    .HasName("PK__Livros__3B69D85ABD077244");
+                    .HasName("PK__Livros__3B69D85A6A1E8AF1");
 
                 entity.Property(e => e.DataPublicacao).HasColumnType("date");
 
@@ -104,23 +102,23 @@ namespace CzBooks_WebApi.Contexts
                 entity.HasOne(d => d.IdAutorNavigation)
                     .WithMany(p => p.Livros)
                     .HasForeignKey(d => d.IdAutor)
-                    .HasConstraintName("FK__Livros__IdAutor__45F365D3");
+                    .HasConstraintName("FK__Livros__IdAutor__32E0915F");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
                     .WithMany(p => p.Livros)
                     .HasForeignKey(d => d.IdCategoria)
-                    .HasConstraintName("FK__Livros__IdCatego__440B1D61");
+                    .HasConstraintName("FK__Livros__IdCatego__30F848ED");
 
                 entity.HasOne(d => d.IdLivrariaNavigation)
                     .WithMany(p => p.Livros)
                     .HasForeignKey(d => d.IdLivraria)
-                    .HasConstraintName("FK__Livros__IdLivrar__44FF419A");
+                    .HasConstraintName("FK__Livros__IdLivrar__31EC6D26");
             });
 
             modelBuilder.Entity<TipoUsuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__TipoUsua__CA04062BA9443903");
+                    .HasName("PK__TipoUsua__CA04062B99C8C687");
 
                 entity.Property(e => e.Tipo)
                     .HasMaxLength(500)
@@ -130,9 +128,9 @@ namespace CzBooks_WebApi.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__Usuarios__5B65BF9701ADFD94");
+                    .HasName("PK__Usuarios__5B65BF972024A5B1");
 
-                entity.HasIndex(e => e.Email, "UQ__Usuarios__A9D10534684F039D")
+                entity.HasIndex(e => e.Email, "UQ__Usuarios__A9D10534C2F268F6")
                     .IsUnique();
 
                 entity.Property(e => e.Email)
@@ -148,7 +146,7 @@ namespace CzBooks_WebApi.Contexts
                 entity.HasOne(d => d.IdTipoUsuarioNavigation)
                     .WithMany(p => p.Usuarios)
                     .HasForeignKey(d => d.IdTipoUsuario)
-                    .HasConstraintName("FK__Usuarios__IdTipo__3E52440B");
+                    .HasConstraintName("FK__Usuarios__IdTipo__2B3F6F97");
             });
 
             OnModelCreatingPartial(modelBuilder);

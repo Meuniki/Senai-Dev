@@ -8,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace CzBooks_WebApi.Repositories
 {
+    /// <summary>
+    /// Classe responsável pelo repositorio da livraria
+    /// </summary>
     public class LivrariaRepository : ILivrariaRepository
     {
         CzbooksContext ctx = new CzbooksContext();
 
+        /// <summary>
+        /// Busca uma livraria pelo seu ID
+        /// </summary>
+        /// <param name="id">ID da livraria que será buscada</param>
+        /// <returns>Um objeto livraria</returns>
         public Livraria BuscaPorId(int id)
         {
             return ctx.Livrarias.FirstOrDefault(e => e.IdLivraria == id);
@@ -20,10 +28,10 @@ namespace CzBooks_WebApi.Repositories
         /// <summary>
         /// Cadastra uma nova livraria
         /// </summary>
-        /// <param name="novoLivraria">Objeto novaCategora que será cadastrada</param>
-        public void Cadastrar(Livraria novoLivraria)
+        /// <param name="novaLivraria">Objeto novaLivraria que será cadastrada</param>
+        public void Cadastrar(Livraria novaLivraria)
         {
-            ctx.Livrarias.Add(novoLivraria);
+            ctx.Livrarias.Add(novaLivraria);
 
             ctx.SaveChanges();
         }
@@ -40,7 +48,7 @@ namespace CzBooks_WebApi.Repositories
         }
 
         /// <summary>
-        /// Lista todas Livrarias
+        /// Lista todas livrarias
         /// </summary>
         /// <returns>Retorna uma lista de livrarias</returns>
         public List<Livraria> Listar()

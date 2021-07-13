@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj": {}
+    "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj": {
+    "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj",
         "projectName": "CzBooks_WebApi",
-        "projectPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj",
-        "packagesPath": "C:\\Users\\45495433882\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\45495433882\\Desktop\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\obj\\",
+        "projectPath": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\CzBooks_WebApi.csproj",
+        "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marce\\OneDrive\\Área de Trabalho\\Ruben\\Tecnico\\Senai-Dev\\senai_czbooks\\Back-End\\CzBooks_WebApi\\CzBooks_WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45495433882\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,9 +37,17 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.7, )"
@@ -53,6 +61,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.1, )"
             }
           },
           "imports": [
