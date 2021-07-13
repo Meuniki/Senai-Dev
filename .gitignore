@@ -62,3 +62,27 @@ Sprint_4-FrontEnd/sp_medical_group/.env.production.local
 Sprint_4-FrontEnd/sp_medical_group/npm-debug.log*
 Sprint_4-FrontEnd/sp_medical_group/yarn-debug.log*
 Sprint_4-FrontEnd/sp_medical_group/yarn-error.log*
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+senai_czbooks/Front End-Web/node_modules
+senai_czbooks/Front End-Web/.pnp
+senai_czbooks/Front End-Web/.pnp.js
+
+# testing
+senai_czbooks/Front End-Web//coverage
+
+# production
+senai_czbooks/Front End-Web//build
+
+# misc
+senai_czbooks/Front End-Web/.DS_Store
+senai_czbooks/Front End-Web/.env.local
+senai_czbooks/Front End-Web/.env.development.local
+senai_czbooks/Front End-Web/.env.test.local
+senai_czbooks/Front End-Web/.env.production.local
+
+senai_czbooks/Front End-Web/npm-debug.log*
+senai_czbooks/Front End-Web/yarn-debug.log*
+senai_czbooks/Front End-Web/yarn-error.log*
