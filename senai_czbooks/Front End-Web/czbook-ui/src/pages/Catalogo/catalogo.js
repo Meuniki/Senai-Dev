@@ -6,7 +6,14 @@ class Catalogo extends Component{
         super(props);
         this.state = {
             ListaLivros : [],
-            titulo : ''
+            idCategoria : 0,
+            idLivraria : 0,
+            idAutor : 0,
+            titulo : '',
+            sinopse : '',
+            dataPublicacao : '0000/00/00',
+            preco : 0.0
+
         }
     }
 
@@ -20,6 +27,14 @@ class Catalogo extends Component{
         .then(data => this.setState({ ListaLivros : data}))
 
         .catch( (erro) => console.log(erro))
+    }
+
+    atualizaEstadoTitulo = async (event) => {
+        await this.setState({ titulo: event.target.value })
+    };
+    
+    cadastraLivro = (event) => {
+        event.preventDefault();
     }
 
     componentDidMount(){
@@ -60,6 +75,21 @@ class Catalogo extends Component{
                                 }
                             </tbody>
                         </table>
+                    </section>
+                    <section>
+                        {/* Cadastro de Livro */}
+                        <h2>Cadastro de Livro</h2>
+                        <form onSubmit={this.cadastrarLivro}>
+                            <div>
+                                <input 
+                                    type = "text"
+                                    value = {this.state.titulo}
+                                    onChange = {this.atualizaEstadoTitulo}
+                                    placeholder = "Título do livro"
+                                />
+                                <button type="submit">Cadastrar</button>
+                            </div>
+                        </form>
                     </section>
                 </main>
             </div>

@@ -34,7 +34,7 @@ namespace CzBooks_WebApi.Controllers
         /// Lista todos os livros
         /// </summary>
         /// <returns>Uma lista de Livros e um status code 200 - Ok</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult Get()
         {
