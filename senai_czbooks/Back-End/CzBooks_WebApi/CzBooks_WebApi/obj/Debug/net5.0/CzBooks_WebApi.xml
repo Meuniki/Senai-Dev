@@ -19,6 +19,7 @@
             Lista todas as categoria
             </summary>
             <returns>Uma lista de categoria e um status code 200 - Ok</returns>
+            
         </member>
         <member name="M:CzBooks_WebApi.Controllers.CategoriasController.Post(CzBooks_WebApi.Domains.Categoria)">
             <summary>
@@ -50,6 +51,7 @@
             Lista todas as livraria
             </summary>
             <returns>Uma lista de livraria e um status code 200 - Ok</returns>
+            
         </member>
         <member name="M:CzBooks_WebApi.Controllers.LivrariasController.Post(CzBooks_WebApi.Domains.Livraria)">
             <summary>
@@ -116,6 +118,7 @@
             Lista todos os usuário
             </summary>
             <returns>Uma lista de usuário e um status code 200 - Ok</returns>
+            
         </member>
         <member name="M:CzBooks_WebApi.Controllers.UsuariosController.Post(CzBooks_WebApi.Domains.Usuario)">
             <summary>

@@ -69,7 +69,7 @@ namespace CzBooks_WebApi.Repositories
             .Include(p => p.IdAutorNavigation)
             .Include(p => p.IdCategoriaNavigation)
             .Include(p => p.IdLivrariaNavigation)
-            .Where(p => p.IdAutorNavigation.IdAutor == id)
+            .Where(p => p.IdAutorNavigation.IdUsuarioNavigation.IdUsuario == id)
             .ToList();
         }
     }

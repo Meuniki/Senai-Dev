@@ -29,7 +29,7 @@ namespace CzBooks_WebApi.Controllers
         /// </summary>
         /// <returns>Uma lista de usuário e um status code 200 - Ok</returns>
         /// 
-        [Authorize]
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -64,7 +64,7 @@ namespace CzBooks_WebApi.Controllers
         /// <param name="id">ID do usuário que será deletado</param>
         /// <returns>Um status code 204 - No Content</returns>
         /// 
-        //[Authorize(Roles = "2,3")]
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
