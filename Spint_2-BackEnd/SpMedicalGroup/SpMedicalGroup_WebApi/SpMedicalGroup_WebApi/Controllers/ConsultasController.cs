@@ -23,7 +23,7 @@ namespace SpMedicalGroup_WebApi.Controllers
         private IConsultaRepository _consultarepository { get; set; }
 
         /// <summary>
-        /// Instancia o objeto _consultaRepository para que haja a rferência aos métodos no repositório
+        /// Instancia o objeto _consultaRepository para que haja a referência aos métodos no repositório
         /// </summary>
         public ConsultasController()
         {
